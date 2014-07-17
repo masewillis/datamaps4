@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+
+  <script src="javascripts/libraries/jquery.js"></script>
+  <script src="javascripts/libraries/jquery-ui.min.js"></script>
+  <script src="javascripts/libraries/underscore.js"></script>
+  <script src="javascripts/libraries/backbone.js"></script>
+  <script src="javascripts/libraries/d3.js"></script>
+  <script src="javascripts/libraries/topojson.js"></script>
+  <script src="javascripts/libraries/datamaps.world.js"></script>
+  <script src="javascripts/libraries/nv.d3.min.js"></script>
+  <script src="javascripts/libraries/dimple.min.js"></script>
+
+  <link href="stylesheets/home.css" rel="stylesheet" type="text/css">
+  <link href="stylesheets/chart.css" rel="stylesheet" type="text/css">
+
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+</head>
+<body>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Map</a></li>
+    <li><a href="#tabs-2">NAFTA</a></li>
+    <li><a href="#tabs-3">News</a></li>
+  </ul>
+  <div id="tabs-1">
+
+    <div id="container1" style="position: relative; width: 100%; max-height: 700px;"></div>
+  </div>
+
+  <div id="tabs-2">
+    <div id="chartContainer">
+                <div class="col-md-10 col-md-offset-1" id="chart">
+                  <h4 style="padding-left:60px;">Export Unit Value</h4>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary active" id="sbar">
+                      <input type="radio" name="options"> Bar
+                    </label>
+                    <label class="btn btn-primary" id="line">
+                      <input type="radio" name="options"> Line
+                    </label>
+                    <label class="btn btn-primary" id="area">
+                      <input type="radio" name="options"> Area
+                    </label>
+                    <label class="btn btn-primary" id="strm">
+                      <input type="radio" name="options"> Stream
+                    </label>
+                  </div>
+                </div>
+                <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+                <script src="javascripts/charts.js"></script>
+
+        </div>
+    <div id="tabs-3">
+    </div>
+</div>
+
+<script src="javascripts/maps.js"></script>
+<script src="javascripts/potentialagreements.js"></script>
+<link href="stylesheets/nv.d3.min.css" rel="stylesheet" type="text/css">
+
+
+
+</body>
