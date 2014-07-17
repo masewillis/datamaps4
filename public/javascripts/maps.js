@@ -264,20 +264,20 @@ var trade_partners = [
 map.bubbles([
 {name: "Canberra", latitude: "-35.26666667", longitude: "149.133333", radius: 6, fillKey: "gt50"},
 {name: "Manama", latitude: "26.23333333", longitude: "50.566667", radius: 6, fillKey: "gt50"},
-{name: "Ottawa", latitude: "45.41666667", longitude: "-75.7", radius: 6, fillKey: "gt50"},
+{name: "Ottawa", title: "NAFTA", year: "1994", description: "A regulation implemented in Mexico, Canada and the United States to eliminate most tariffs on trade between these nations. The three countries phased out numerous tariffs with a particular focus on those related to agriculture, textiles and automobiles. NAFTA’s purpose is to encourage economic activity between the United States, Mexico and Canada.", latitude: "45.41666667", longitude: "-75.7", radius: 6, fillKey: "gt50"},
 {name: "Santiago", latitude: "-33.45", longitude: "-70.666667", radius: 6, fillKey: "gt50"},
 {name: "Bogota", latitude: "4.6", longitude: "-74.083333", radius: 6, fillKey: "gt50"},
-{name: "San Jose", latitude: "9.933333333", longitude: "-84.083333", radius: 6, fillKey: "gt50"},
-{name: "Santo Domingo", latitude: "18.46666667", longitude: "-69.9", radius: 6, fillKey: "gt50"},
-{name: "San Salvador", latitude: "13.7", longitude: "-89.2", radius: 6, fillKey: "gt50"},
-{name: "Guatemala City", latitude: "14.61666667", longitude: "-90.516667", radius: 6, fillKey: "gt50"},
-{name: "Tegucigalpa", latitude: "14.1", longitude: "-87.216667", radius: 6, fillKey: "gt50"},
+{name: "San Jose", title: "DR-CAFTA", year: "2004", description: "The CAFTA-DR is the first free trade agreement between the United States and a group of smaller developing economies. This agreement is creating new economic opportunities by eliminating tariffs, opening markets, reducing barriers to services, and promoting transparency. It is facilitating trade and investment among the seven countries and furthering regional integration.", latitude: "9.933333333", longitude: "-84.083333", radius: 6, fillKey: "gt50"},
+{name: "Santo Domingo", title: "DR-CAFTA", year: "2004", description: "The CAFTA-DR is the first free trade agreement between the United States and a group of smaller developing economies. This agreement is creating new economic opportunities by eliminating tariffs, opening markets, reducing barriers to services, and promoting transparency. It is facilitating trade and investment among the seven countries and furthering regional integration.", latitude: "18.46666667", longitude: "-69.9", radius: 6, fillKey: "gt50"},
+{name: "San Salvador", title: "DR-CAFTA", year: "2004", description: "The CAFTA-DR is the first free trade agreement between the United States and a group of smaller developing economies. This agreement is creating new economic opportunities by eliminating tariffs, opening markets, reducing barriers to services, and promoting transparency. It is facilitating trade and investment among the seven countries and furthering regional integration.", latitude: "13.7", longitude: "-89.2", radius: 6, fillKey: "gt50"},
+{name: "Guatemala City", title: "DR-CAFTA", year: "2004", description: "The CAFTA-DR is the first free trade agreement between the United States and a group of smaller developing economies. This agreement is creating new economic opportunities by eliminating tariffs, opening markets, reducing barriers to services, and promoting transparency. It is facilitating trade and investment among the seven countries and furthering regional integration.", latitude: "14.61666667", longitude: "-90.516667", radius: 6, fillKey: "gt50"},
+{name: "Tegucigalpa", title: "DR-CAFTA", year: "2004", description: "The CAFTA-DR is the first free trade agreement between the United States and a group of smaller developing economies. This agreement is creating new economic opportunities by eliminating tariffs, opening markets, reducing barriers to services, and promoting transparency. It is facilitating trade and investment among the seven countries and furthering regional integration.", latitude: "14.1", longitude: "-87.216667", radius: 6, fillKey: "gt50"},
+{name: "Managua", title: "DR-CAFTA", year: "2004", description: "The CAFTA-DR is the first free trade agreement between the United States and a group of smaller developing economies. This agreement is creating new economic opportunities by eliminating tariffs, opening markets, reducing barriers to services, and promoting transparency. It is facilitating trade and investment among the seven countries and furthering regional integration.", latitude: "12.13333333", longitude: "-86.25", radius: 6, fillKey: "gt50"},
 {name: "Jerusalem", latitude: "31.76666667", longitude: "35.233333", radius: 6, fillKey: "gt50"},
 {name: "Amman", latitude: "31.95", longitude: "35.933333", radius: 6, fillKey: "gt50"},
 {name: "Seoul", latitude: "37.55", longitude: "126.983333", radius: 6, fillKey: "gt50"},
-{name: "Mexico City", latitude: "19.43333333", longitude: "-99.133333", radius: 6, fillKey: "gt50"},
-{name: "Rabat", latitude: "34.01666667", longitude: "-6.816667", radius: 6, fillKey: "gt50"},
-{name: "Managua", latitude: "12.13333333", longitude: "-86.25", radius: 6, fillKey: "gt50"},
+{name: "Mexico City", title: "NAFTA", year: "1994", description: "A regulation implemented in Mexico, Canada and the United States to eliminate most tariffs on trade between these nations. The three countries phased out numerous tariffs with a particular focus on those related to agriculture, textiles and automobiles. NAFTA’s purpose is to encourage economic activity between the United States, Mexico and Canada.", latitude: "19.43333333", longitude: "-99.133333", radius: 6, fillKey: "gt50"},
+{name: "Rabat", title: "Morocco Free Trade Agreement", year: "1996", description: "The United States and Morocco signed an FTA on June 15, 2004. The Agreement entered into force on January 1, 2006. The United States-Morocco FTA is a comprehensive agreement that supports the significant economic and political reforms that are underway in Morocco and provides for improved commercial opportunities for U.S. exports to Morocco by reducing and eliminating trade barriers.", latitude: "34.01666667", longitude: "-6.816667", radius: 6, fillKey: "gt50"},
 {name: "Muscat", latitude: "23.61666667", longitude: "58.583333", radius: 6, fillKey: "gt50"},
 {name: "Panama City", latitude: "8.966666667", longitude: "-79.533333", radius: 6, fillKey: "gt50"},
 {name: "Lima", latitude: "-12.05", longitude: "-77.05", radius: 6, fillKey: "gt50"},
@@ -288,7 +288,11 @@ map.bubbles([
 
 ], {
  popupTemplate: function(geo, data) {
-   return "<div class='hoverinfo'>It is " + data.name + "</div>";
+   return  ['<div class="hoverinfo"><strong>' +  data.name + '</strong>',
+            '<br/>Agreement: ' +  data.title + '',
+            '<br/>Year Ratified: ' +  data.year + '',
+            '<br/>Description: ' +  data.description + '',
+            '</div>'].join('');
 }
 });
 
