@@ -17,6 +17,12 @@
   background-color: rgba(0,0,0,0.9)
 }
 
+.datamap {
+  padding: 12em;
+  margin-left: -2.5em;
+  padding-top: 0;
+}
+
 /*#container1 {
   background-color: rgba(0,0,0,0.8)
 }*/

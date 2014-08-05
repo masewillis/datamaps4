@@ -6,6 +6,14 @@
   height: 400px;
 }
 
+svg .tick {
+  font-size: 10px;
+}
+
+svg .legend{
+  font-size: 10px;
+}
+
   .tab-2 {
         font: 9px sans-serif;
         color: #121401;
